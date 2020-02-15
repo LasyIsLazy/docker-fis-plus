@@ -33,7 +33,7 @@ fis-plus `
 Bash 示例：
 
 ```bash
-docker run -it --rm \
+docker run -it \
 --name fis-plus-app \
 -p 8080:8080 \
 --mount type=bind,source=C:/code/zyb/fisp/projects,target=/opt/fisp/projects \
@@ -45,13 +45,25 @@ fis-plus \
 powershell 示例：
 
 ```powershell
-docker run -it --rm `
+docker run -it `
 --name fis-plus-app `
 -p 8080:8080 `
 --mount type=bind,source=C:/code/zyb/fisp/projects,target=/opt/fisp/projects `
 --mount type=bind,source=C:/code/zyb/fisp/www,target=/root/.fis-plus-tmp/www `
 fis-plus `
 /bin/sh
+```
+
+之后再启动就可以运行
+
+```
+ docker container start [容器名称] -i
+```
+
+示例：
+
+```
+ docker container start fis-plus-app -i
 ```
 
 
