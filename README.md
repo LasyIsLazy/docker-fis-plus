@@ -18,7 +18,7 @@ powershell
 docker run -it --rm `
 --name fis-plus-app `
 -p 8080:8080 `
---mount type=bind,source=C:/code/zyb/fis-plus-pc-demo,target=/opt/fisp/app `
+--mount type=bind,source=C:/code/zyb/fisp/projects,target=/opt/fisp/projects `
 --mount type=bind,source=C:/code/zyb/fisp/www,target=/root/.fis-plus-tmp/www `
 fis-plus `
 /bin/sh
@@ -30,7 +30,7 @@ Bash
 docker run -it --rm \
 --name fis-plus-app \
 -p 8080:8080 \
---mount type=bind,source=C:/code/zyb/fis-plus-pc-demo,target=/opt/fisp/app \
+--mount type=bind,source=C:/code/zyb/fisp/projects,target=/opt/fisp/projects \
 --mount type=bind,source=C:/code/zyb/fisp/www,target=/root/.fis-plus-tmp/www \
 fis-plus \
 /bin/sh
@@ -55,7 +55,7 @@ fisp server start
 编译
 
 ```bash
-cd /opt/fisp/app
+cd /opt/fisp/projects/project-name
 fisp release
 ```
 
