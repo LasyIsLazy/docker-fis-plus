@@ -27,4 +27,4 @@ RUN cat /etc/os-release \
     # fis-plus
     && npm install -g fis-plus -registry https://registry.npm.taobao.org \
     && fisp -v
-CMD [ "fisp", "server", "init" ]
+CMD [ "fisp", "-v"]
